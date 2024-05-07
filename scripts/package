@@ -6,6 +6,8 @@ REPO=${REPO:-rancher}
 source $(dirname $0)/version
 cd $(dirname $0)/..
 
+REPO="jq20" # for testing
+
 # manifest push happens as part of make release, so login is required inside the dapper container
 echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 
